@@ -1,11 +1,13 @@
 import React from "react";
+import Years from "./Years";
 
 
-export default function List() {
+export default function List(props) {
     return (
         <ul>
-            <li>1</li>
-            <li>2</li>
+            {props.years.map(year =>{
+                return <Years year={year} key={year.id}/>
+            })}
         </ul>
     )
 }
